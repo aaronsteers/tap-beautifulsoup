@@ -100,6 +100,8 @@ class BeautifulSoupStream(Stream):
         ),
         th.Property(
             "metadata",
-            th.ObjectType(),
+            th.ObjectType(
+                th.Property("source", th.StringType),
+            ),
         ),
     ).to_dict()
