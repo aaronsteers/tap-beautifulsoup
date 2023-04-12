@@ -73,7 +73,7 @@ class BeautifulSoupStream(Stream):
         self.download()
 
         docs = []
-        for p in Path(self.output_folder).rglob("*.html"):
+        for p in Path(self.output_folder).glob(f"{self.site_url}/**/*.html"):
             if p.is_dir():
                 continue
 
