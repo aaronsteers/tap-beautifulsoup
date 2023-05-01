@@ -11,7 +11,6 @@ def run_cmd(cmd, verbose=False, *args, **kwargs):
     std_out, std_err = process.communicate()
     if verbose:
         print(std_out.strip(), std_err)
-    pass
 
 
 def download(url: str, download_folder: Path | str = "output", verbose: bool = False):
